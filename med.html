@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالي شهد</title>
+    <style>
+        /* إعادة تعيين الخطوط والتنسيقات الأساسية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+
+        /* الهوية اللونية الخاصة بي والاتساع المرن */
+        body {
+            background-color: #f4f7f6;
+            /* خلفية هادئة مائلة للرمادي والأخضر الباهت */
+            color: #2d3748;
+            line-height: 1.7;
+            padding-bottom: 4rem;
+        }
+
+        /* تنسيق الهيدر باستخدام Flexbox */
+        .page-header {
+            background-color: #ffffff;
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .page-header h1 {
+            font-size: 1.4rem;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        /* تفصيل إبداعي: تغيير اللون عند الحوم بالماوس */
+        .nav-menu a:hover {
+            color: #9b06df;
+            /* الأخضر الزمردي الخاص بهويتي */
+        }
+
+        /* قسم التعريف الشخصي بنسب مرنة */
+        .about-section {
+            max-width: 84vw;
+            margin: 3.5rem auto;
+            padding: 2.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-section h2 {
+            font-size: 1.8rem;
+            color: #b504eb;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-section p {
+            font-size: 1.05rem;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        /* حاوية قسم المشاريع */
+        .projects-container {
+            max-width: 84vw;
+            margin: 3.5rem auto;
+        }
+
+        .projects-container h2 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* توزيع الكروت باستخدام CSS Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        /* تصميم الكروت والتأثيرات الحركية الإبداعية */
+        .project-card {
+            background-color: #ffffff;
+            padding: 2.2rem 1.8rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        /* تفصيل إبداعي 1: تأثير الارتفاع والظل الملون عند تمرير الماوس */
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(15, 118, 110, 0.08);
+            border-color: #5e0adb;
+        }
+
+        /* تفصيل إبداعي 2: كارت مميز يبرز عن البقية بتصميم داكن فاخر */
+        .project-card.featured {
+            background-color: #1e293b;
+            border: none;
+            color: #f8fafc;
+        }
+
+        .project-card.featured h3 {
+            color: #b60bea;
+            /* لون أزرق ذكي يبرز داخل الكارت الداكن */
+        }
+
+        .project-card.featured p {
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="page-header">
+        <h1>شهد.</h1>
+        <ul class="nav-menu">
+            <li><a href="#about">عني</a></li>
+            <li><a href="#projects">مهاراتي</a></li>
+            <li><a href="#contact">تواصل</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- قسم التعريف الشخصي الخاص بكِ -->
+        <section id="about" class="about-section">
+            <h2>من أنا؟</h2>
+            <p>أنا شهد، طالبة في تخصص الأنظمة الذكية وهندسة الحاسوب. أجمع في دراستي وشغفي بين بناء البرمجيات وتطوير
+                الحلول البرمجية الذكية. أركز دائماً على كتابة كود نظيف وبناء واجهات مستخدم تجمع بين البساطة والكفاءة
+                العالية.
+                <br>
+                *مهندسة أنظمة ذكية:* تجمع بين كفاءة هندسة الحاسوب وذكاء البرمجيات الحديثة.
+                <br>
+                *محللة ومطورة:* تتقن بناء واجهات الويب المرنة، وتجيد التعامل مع خوارزميات البيانات والتعلم الآلي.
+                <br>
+                *منطقية وعملية:* تبرع في ربط البرمجة بالتحكم الواقعي (كالأنظمة الذكية والـ PLC)، وتميل للحلول الذكية
+                والمباشرة.
+            </p>
+        </section>
+
+        <!-- قسم المهارات والمشاريع باستخدام نظام الشبكة -->
+        <section id="projects" class="projects-container">
+            <h2>مجالات تركيزي</h2>
+            <div class="projects-grid">
+
+                <!-- الكارت الأول -->
+                <div class="project-card">
+
+                    <h3>تطوير الويب وبنائه</h3>
+                    <p>تصميم وهيكلة صفحات إنترنت متكاملة باستخدام أحدث تقنيات العرض لضمان مرونة الواجهات وتوافقها.</p>
+                </div>
+
+                <!-- الكارت الثاني (المميز والمختلف تماماً لتخصصك) -->
+                <div class="project-card featured">
+
+                    <h3>الأنظمة والتحكم الذكي</h3>
+                    <p>دراسة وبرمجة خوارزميات الذكاء الاصطناعي وبناء منطق التحكم الآلي للأنظمة الهندسية الذكية.</p>
+                </div>
+
+                <!-- الكارت الثالث -->
+                <div class="project-card">
+
+                    <h3>تحليل البيانات ونمذجتها</h3>
+                    <p>التعامل مع البيانات واستخراج الأنماط الإحصائية لبناء نماذج تنبؤية دقيقة تدعم اتخاذ القرار.</p>
+                </div>
+                <section id="contact" style="max-width: 84vw; margin: 3.5rem auto; text-align: center;">
+                    <h2 style="font-size: 1.8rem; color: #0f172a; margin-bottom: 1rem; font-weight: 700;">تواصل معي</h2>
+                    <p style="font-size: 1.05rem; color: #4a5568;">يمكنك مراسلتي عبر البريد الإلكتروني: 
+                        <a
+                            href="mailto:sh420322927@gmail.com"
+                            style="color: #aa0bee; font-weight: 600; text-decoration: none;">sh420322927@gmail.com</a></p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
